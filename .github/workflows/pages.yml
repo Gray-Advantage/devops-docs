@@ -8,10 +8,11 @@ on:
       - "requirements-dev.txt"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
-# Учебный инцидент: разрешение id-token: write будет добавлено после диагностики.
 permissions:
   contents: read
   pages: write
+  id-token: write
+
 concurrency:
   group: pages
   cancel-in-progress: false
